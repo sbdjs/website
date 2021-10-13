@@ -1,38 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
-import Nav from './Nav'
-import { useAuth0 } from '@auth0/auth0-react';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-function App() {
-  
-  const {
-    loginWithPopup, 
-    loginWithRedirect, 
-    logout, 
-    user, 
-    isAuthenticated
-  } = useAuth0();
-  
+export default function App() {
   return (
-    <div className="App font-averta font-extrabold text-lg">
-      <h1>Autho0 auth</h1>
-      <ul>
-        <li>
-          <button onClick={loginWithPopup}>Login with Popup</button>
-        </li>
-        <li>
-          <button onClick={loginWithRedirect}>Login with Redirect</button>
-        </li>
-        <li>
-          <button onClick={logout}>Logout</button>
-        </li>
-      </ul>
-      <h3>User is { isAuthenticated ? "Logged" : "Not logged"}</h3>
-      <pre style={{textAlign: 'start'}}>
-        {JSON.stringify(user, null, 2)}
-      </pre>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/users">Users</Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+function About() {
+  return <a href="about.html">About</a>;
+}
+
+function Home() {
+  return <h2>Home</h2>;
+}
+
+function Users() {
+  return <h2>Users</h2>;
+}
