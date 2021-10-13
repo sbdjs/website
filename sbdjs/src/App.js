@@ -1,5 +1,6 @@
 //import logo from './logo.svg';
 import './App.css';
+import AddBot from './AddBot';
 import { useAuth0 } from '@auth0/auth0-react';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <pre style={{textAlign: 'start'}}>
         {JSON.stringify(user, null, 2)}
       </pre>
+      <AddBot />
     </div>
   );
 }
