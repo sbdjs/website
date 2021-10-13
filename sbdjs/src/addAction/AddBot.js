@@ -19,11 +19,12 @@ const AddBot = () => {
     }
     
     return(
-        <div>
+        <div className="my-12">
             <form onSubmit={e => onSubmit(e)}>
-                <div class="entry border-2 p-2 m-4">
-                    <label for="">Nom du Bot:</label>
-                    <input 
+                <div class="w-full max-w-sm mx-auto flex flex-col items-center mb-6">
+                    <label className="font-semibold" for="">Nom du Bot:</label>
+                    <input
+                        className class="entry w-full rounded-lg border-2 p-2 m-2 outline-none focus-within:border-blue-700 ease-out transition-all"
                         type="text" 
                         name="bot_name" 
                         placeholder="Entrer un nom..."
@@ -31,9 +32,10 @@ const AddBot = () => {
                         onChange={e => onEntryChange(e)}
                     />
                 </div>
-                <div class="entry border-2 p-2 m-4">
-                    <label for="">Description du Bot:</label>
-                    <input 
+                <div class="w-full max-w-sm mx-auto flex flex-col items-center mb-6">
+                    <label className="font-semibold" for="">Description du Bot:</label>
+                    <input
+                        className class="entry w-full rounded-lg border-2 p-2 m-2 outline-none focus-within:border-blue-700 ease-in-out transition-all"
                         type="text" 
                         name="bot_description" 
                         placeholder="Entrer une description..."
@@ -41,9 +43,10 @@ const AddBot = () => {
                         onChange={e => onEntryChange(e)}
                     />
                 </div>
-                <div class="entry border-2 p-2 m-4">
-                    <label for="">Avatar du Bot:</label>
-                    <input 
+                <div class="w-full max-w-sm mx-auto flex flex-col items-center mb-6">
+                    <label className="font-semibold" for="">Avatar du Bot:</label>
+                    <input
+                        className class="entry w-full rounded-lg border-2 p-2 m-2 outline-none focus-within:border-blue-700 ease-out transition-all"
                         type="text" 
                         name="bot_avatar" 
                         placeholder="Entrer un avatar..."
@@ -51,9 +54,10 @@ const AddBot = () => {
                         onChange={e => onEntryChange(e)}
                     />
                 </div>
-                <div class="entry border-2 p-2 m-4">
-                    <label for="">Invitation du Bot:</label>
-                    <input 
+                <div class="w-full max-w-sm mx-auto flex flex-col items-center mb-6">
+                    <label className="ml-0 font-semibold" for="">Invitation du Bot:</label>
+                    <input
+                        className class="entry w-full rounded-lg border-2 p-2 m-2 outline-none focus-within:border-blue-700 ease-out transition-all"
                         type="text" 
                         name="bot_invit" 
                         placeholder="Entrer une invitation..."
@@ -61,7 +65,7 @@ const AddBot = () => {
                         onChange={e => onEntryChange(e)}
                     />
                 </div>
-                <button className="bg-blue-700 text-white py-2 px-4">Envoyer</button>
+                <button className="rounded-lg bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2.5 px-6 ease-out transition-all">Envoyer</button>
             </form>
         </div>
     );
