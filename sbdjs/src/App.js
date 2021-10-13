@@ -1,8 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import Nav from './Nav'
 import { useAuth0 } from '@auth0/auth0-react';
 
 function App() {
+  
   const {
     loginWithPopup, 
     loginWithRedirect, 
