@@ -15,7 +15,7 @@ const AddBot = () => {
 
     const onSubmit = async e => {
         e.preventDefault();
-        console.log(user.bot_name);
+        console.log(user);
     }
     
     return(
