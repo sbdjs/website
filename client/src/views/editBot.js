@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth0 } from "@auth0/auth0-react";
 import Axios from 'axios';
 import Moment from 'moment';
 
 function Edit() {
-  const { user } = useAuth0();
 
   const [botName, setBotName] = useState('')
   const [botDesc, setBotDesc] = useState('')

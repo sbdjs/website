@@ -17,7 +17,6 @@ function Bot() {
             .then((response) => {
                setUserBot(response.data);
                console.log(response.data);
-               console.log(user.sub);
             })
             .catch((error) => {
                console.log(error);
@@ -29,19 +28,17 @@ function Bot() {
          return(
             <div>Chargement...</div>
          );
-      }
+   }
+   console.log(setUserBot.json);
 
-      userBot.map((bot) => {
-         console.log(bot.id);
-      })
+
 
 
    if (isAuthenticated) {
          return (
             <div className="Bot">
                <p>{user.sub}</p>
-               <p>{userBot}</p>
-               <p className="text-green-450">{userBot.data}</p>
+               <p className="text-green-450">{setUserBot['id']}</p>
                <h1 className="text-center text-3xl font-extrabold mt-8 mb-16">Envie d'ajouter votre bot ? N'attendez plus !</h1>
                <Add />
             </div>
@@ -49,7 +46,6 @@ function Bot() {
    } else {
       return (
          <div className="Bot">
-            <p>{userBot}</p>
             <h1 className="text-center text-3xl font-extrabold mt-8 mb-16">Envie d'ajouter votre bot ? N'attendez plus !</h1>
             <LoginButton />
          </div> 

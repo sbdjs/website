@@ -6,10 +6,10 @@ const mysql = require('mysql');
 require('dotenv').config()
 
 const db = mysql.createPool({
-   host: 'localhost',
-   user: 'root',
-   password: '',
-   database: 'sbdjs'
+   host: process.env.DB_HOST,
+   user: process.env.DB_USERNAME,
+   password: process.env.DB_PASSWORD,
+   database: process.env.DB_DATABASE,
 });
 
 app.use(cors());
