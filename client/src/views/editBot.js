@@ -31,7 +31,7 @@ function Edit() {
   }
 
   return (
-    <div className="App">
+    <div className="App flex flex-wrap justify-center">
       {botList.map((bot) => {
         return(
           <div className="rounded-lg bg-gray-700 border-2 border-gray-400 w-full max-w-sm m-4 overflow-hidden">
@@ -41,7 +41,7 @@ function Edit() {
             <div className="p-4 relative">
             <input className="" alt="logo bot" placeholder={bot.bot_avatar} onChange={(e) => { setBotAvatar(e.target.value)}} />
             <div className="flex items-center mt-10 mb-2">
-              <input className="" placeholder={bot.bot_name} onChange={(e) => { setBotName(e.target.value)}} />
+              <input className="" value={bot.bot_name} onChange={(e) => { setBotName(e.target.value)}} />
             </div>
             <div className="flex flex-col my-2">
               <textarea className="resize-none h-36 outline-none p-2" placeholder={bot.bot_desc} onChange={(e) => { setBotDesc(e.target.value)}} />

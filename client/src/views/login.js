@@ -12,7 +12,7 @@ const LoginButton = () => {
       );
   } else {
     return(
-        <button onClick={() => loginWithRedirect()}>Log In</button>
+        <button className="bg-green-450 hover:bg-green-500 transition-all ease-in-out rounded-lg py-2 px-4 text-white hover:text-gray-100 text-xl font-bold"onClick={() => loginWithRedirect()}>Se Connecter</button>
     );
   }
 };

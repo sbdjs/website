@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Edit from '../views/editBot';
-import Add from '../views/addBot';
 import Axios from 'axios';
 import LoginButton from '../views/login';
 import { useAuth0 } from "@auth0/auth0-react";
@@ -38,7 +37,7 @@ function Bot() {
          return (
             <div className="Bot">
                <h1 className="text-center text-3xl font-extrabold mt-8 mb-16">Envie d'ajouter votre bot ? N'attendez plus !</h1>
-               <Add />
+               <Edit />
             </div>
          );
    } else {

@@ -1,4 +1,4 @@
-const ClassParam = "hover:text-gray-300 transition-color ease-in-out";
+const ClassParam = "hover:text-gray-300 transition-all ease-in-out";
 
 export const MenuItems = [
    {
@@ -19,6 +19,11 @@ export const MenuItems = [
    {
       title: 'Ajouter',
       url: '/bot',
+      cName: ClassParam,
+   },
+   {
+      title: 'Modifier',
+      url: '/edit',
       cName: ClassParam,
    },
 ]

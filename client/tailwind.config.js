@@ -19,6 +19,11 @@ module.exports = {
           '450': '#3EAF7C',
         },
       },
+        borderColor: {
+           green: {
+            '450': '#3EAF7C',
+         }
+      }
     },
   },
   variants: {

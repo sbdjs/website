@@ -35,7 +35,7 @@ app.get('/api/get/verfification/:uid', (req, res) => {
     const sql = "SELECT id FROM usertable WHERE uid = ?"
     db.query(sql, [uid], (err, result) => {
         res.send(result);
-        console.log(result);
+        //console.log(result);
     });
 })
 
@@ -49,7 +49,7 @@ app.post('/api/insert', (req, res) => {
 
    const sql = "INSERT INTO usertable (uid, username, bot_name, bot_desc, bot_avatar, bot_invit) VALUES (?, ?, ?, ?, ?, ?);"
    db.query(sql, [uid, username, bot_name, bot_desc, bot_avatar, bot_invit], (err, result) => {
-      console.log(result)
+      //console.log(result)
    });
 });
 
