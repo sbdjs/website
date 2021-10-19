@@ -6,6 +6,19 @@ module.exports = {
       fontFamily: {
         averta: ['Averta', 'sans-serif'],
       },
+      backgroundColor: {
+        gray: {
+          '950': '#090A16',
+        },
+        green: {
+          '450': '#3EAF7C'
+        }
+      },
+      textColor: {
+        green: {
+          '450': '#3EAF7C',
+        },
+      },
     },
   },
   variants: {

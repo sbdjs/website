@@ -30,6 +30,15 @@ app.get('/api/get', (req, res) => {
    });
 });
 
+app.get('/api/get/verfification/:uid', (req, res) => {
+    const uid = req.params.uid;
+    const sql = "SELECT id FROM usertable WHERE uid = ?"
+    db.query(sql, [uid], (err, result) => {
+        res.send(result);
+        console.log(result);
+    });
+})
+
 app.post('/api/insert', (req, res) => {
    const uid = req.body.uid, 
    username = req.body.username,

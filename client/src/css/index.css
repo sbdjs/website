@@ -2,3 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 @import url('./font.css');
+
+/* width */
+*::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  *::-webkit-scrollbar-track {
+    background: #090A16;
+  }
+  
+  /* Handle */
+  *::-webkit-scrollbar-thumb {
+    background: #3EAF7C;
+    border-radius: 9999px;
+  }
+  
+  /* Handle on hover */
+  *::-webkit-scrollbar-thumb:hover {
+    background: #4ad395;
+  }
