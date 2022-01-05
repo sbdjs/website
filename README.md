@@ -36,7 +36,7 @@ Ceci est une liste des étapes à suivre pour l'installation et le bon fonctionn
  
 ### Installation
 
-1. Ouvrir le dossier crée
+1. Ouvrir le dossier créé
    ```sh
    cd ./sdbjs
    ```
